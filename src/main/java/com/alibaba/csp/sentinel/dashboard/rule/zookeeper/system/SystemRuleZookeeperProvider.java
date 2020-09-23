@@ -22,4 +22,5 @@ public class SystemRuleZookeeperProvider extends RuleZkProvider<SystemRuleEntity
     public String getDataIdPostfix() {
         return type;
     }
+
 }

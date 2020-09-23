@@ -18,9 +18,9 @@ import java.util.List;
  */
 public abstract class RuleZkProvider<T extends RuleEntity> implements DynamicRuleProvider<List<T>> {
     @Autowired
-    private CuratorFramework zkClient;
+    protected CuratorFramework zkClient;
     @Autowired
-    private Converter<String, List<T>> converter;
+    protected Converter<String, List<T>> converter;
 
     @Override
     public List<T> getRules(String appName) throws Exception {

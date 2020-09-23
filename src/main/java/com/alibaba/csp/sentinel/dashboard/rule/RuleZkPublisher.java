@@ -20,9 +20,9 @@ import java.util.List;
  */
 public abstract class RuleZkPublisher<T extends RuleEntity> implements DynamicRulePublisher<List<T>> {
     @Autowired
-    private CuratorFramework zkClient;
+    protected CuratorFramework zkClient;
     @Autowired
-    private Converter<List<T>, String> converter;
+    protected Converter<List<T>, String> converter;
 
     @Override
     public void publish(String app, List<T> rules) throws Exception {
